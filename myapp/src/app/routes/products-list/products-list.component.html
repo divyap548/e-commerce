@@ -1,0 +1,41 @@
+<div class="container text-center">
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let product of sliceProduct">
+           <a class="nav-link" aria-current="page" [routerLink]="['/product', product.id]" target="_blank"> 
+            <ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false">
+                <ng-template ngbSlide>
+                    <div class="picsum-img-wrapper">
+                        <img src="{{product.images[0]}}" alt="{{product.images}}" style="width: 100%;"/>
+                    </div>
+                    <div class="carousel-caption">
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <div class="picsum-img-wrapper">
+                        <img src="{{product.images[1]}}" alt="{{product.images}}" style="width: 100%;"/>
+                    </div>
+                    <div class="carousel-caption">
+
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <div class="picsum-img-wrapper">
+                        <img src="{{product.images[2]}}" alt="{{product.images}}" style="width: 100%;"/>
+                    </div>
+                    <div class="carousel-caption">
+
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+            </a>
+            <h4 class="text-start p-2 m-0">{{product.title}}</h4>
+            <h6 class="text-start p-2 text-secondary m-0">price: $ {{product.price}}</h6>
+            
+        </div>
+    </div>
+    <!-- <ul>
+    <li *ngFor="let product of productsList">
+        <h1>{{product.id}}</h1>
+
+    </li>
+</ul> -->
