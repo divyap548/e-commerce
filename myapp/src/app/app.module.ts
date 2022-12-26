@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ProductsListComponent } from './routes/products-list/products-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailsComponent } from './routes/product-details/product-details.component';
+import { HeaderComponent } from './header/header.component';
 
 const myRoutes: Routes = [
   { path: 'products', component: ProductsListComponent },
@@ -19,6 +20,7 @@ const myRoutes: Routes = [
     AppComponent,
     ProductsListComponent,
     ProductDetailsComponent,
+    HeaderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(myRoutes), HttpClientModule, NgbModule],
   providers: [],
